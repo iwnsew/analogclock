@@ -6,6 +6,7 @@ An east-to-use analog clock widget for web pages.
 
 * Vecter images to fit any size
 * Not affected by user's time zone
+* No external resources/dependencies
 
 ## How to use
 

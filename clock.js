@@ -1,3 +1,9 @@
+/*!
+ * Simple Analog Clock v1.0.1 (https://github.com/iwnsew/analogclock)
+ * (c) Masumi Shirakawa
+ * Licensed under MIT (https://github.com/iwnsew/analogclock/blob/main/LICENSE.txt)
+ */
+
 window.addEventListener('load', () => {
   const clock = document.getElementById('clock');
 
@@ -43,9 +49,14 @@ window.addEventListener('load', () => {
     return element;
   }
 
-  const hourId = 'hour'+Math.random().toString(32).substring(2);
-  const minuteId = 'minute'+Math.random().toString(32).substring(2);
-  const secondId = useSecond ? 'second'+Math.random().toString(32).substring(2) : null;
+  const getRandomId = () => {
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    return Array.from({ length: 8 }, () => chars[Math.floor(Math.random() * chars.length)]).join('');
+  }
+
+  const hourId = 'hour-'+getRandomId();
+  const minuteId = 'minute-'+getRandomId();
+  const secondId = useSecond ? 'second-'+getRandomId() : null;
 
   const hour = createClockElement(hourId, '#333333', '3%', '25%', '25%', '48.5%');
   const minute = createClockElement(minuteId, '#333333', '2%', '30%', '20%', '49%');
