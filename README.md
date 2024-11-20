@@ -4,7 +4,7 @@ An east-to-use analog clock widget for web pages.
 
 ## Features
 
-* Vecter images to fit any size
+* Vector images to fit any size
 * Not affected by user's time zone
 * No external resources/dependencies
 
